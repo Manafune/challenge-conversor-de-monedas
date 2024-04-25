@@ -25,7 +25,7 @@ public class Conversor {
             ApiCambio apiCambio =gson.fromJson(response.body(), ApiCambio.class);
             CambioMoneda miMoneda = new CambioMoneda(apiCambio);
 
-            return "El valor de: "+ cantidad +"["+miMoneda.getCodigoBase()+"]"+" corresponde al valor final de =>>> "+miMoneda.getResultadoDeConversion() +" ["+miMoneda.getCodigoSeleccionado() + "]";
+            return "El valor de: "+ cantidad +" ["+miMoneda.getCodigoBase()+"]"+" corresponde al valor final de =>>> "+miMoneda.getResultadoDeConversion() +" ["+miMoneda.getCodigoSeleccionado() + "]";
         } catch (Exception e) {
             throw new RuntimeException("No se recibio respuesta.");
         }
